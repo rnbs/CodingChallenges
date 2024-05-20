@@ -82,48 +82,31 @@ public class CountIslands {
 
     public static void main(String[] args) {
         CountIslands countIslands = new CountIslands();
-        int bfsResult = countIslands.countIslandsUsingBFS(
-                new int[][] {
-                        { 0, 1, 1, 1, 0 },
-                        { 0, 0, 0, 1, 1 },
-                        { 0, 1, 1, 1, 0 },
-                        { 0, 1, 1, 0, 0 },
-                        { 0, 0, 0, 0, 0 }
-                }
-        );
+        int[][] matrix1 = new int[][] {
+                { 0, 1, 1, 1, 0 },
+                { 0, 0, 0, 1, 1 },
+                { 0, 1, 1, 1, 0 },
+                { 0, 1, 1, 0, 0 },
+                { 0, 0, 0, 0, 0 }
+        };
 
-        int bfsResult2 = countIslands.countIslandsUsingBFS(
-                new int[][] {
-                        { 1, 1, 1, 0, 0 },
-                        { 0, 1, 0, 0, 1 },
-                        { 0, 0, 1, 1, 0 },
-                        { 0, 0, 1, 0, 0 },
-                        { 0, 0, 1, 0, 0 }
-                }
-        );
+        int[][] matrix2 = new int[][] {
+                { 1, 1, 1, 0, 0 },
+                { 0, 1, 0, 0, 1 },
+                { 0, 0, 1, 1, 0 },
+                { 0, 0, 1, 0, 0 },
+                { 0, 0, 1, 0, 0 }
+        };
+        int bfsResult = countIslands.countIslandsUsingBFS(matrix1);
+
+        int bfsResult2 = countIslands.countIslandsUsingBFS(matrix2);
 
 
         System.out.println(bfsResult + " " + bfsResult2);
 
-        int dfsResult = countIslands.countIslandsUsingDFS(
-                new int[][] {
-                        { 0, 1, 1, 1, 0 },
-                        { 0, 0, 0, 1, 1 },
-                        { 0, 1, 1, 1, 0 },
-                        { 0, 1, 1, 0, 0 },
-                        { 0, 0, 0, 0, 0 }
-                }
-        );
+        int dfsResult = countIslands.countIslandsUsingDFS(matrix1);
 
-        int dfsResult2 = countIslands.countIslandsUsingDFS(
-                new int[][] {
-                        { 1, 1, 1, 0, 0 },
-                        { 0, 1, 0, 0, 1 },
-                        { 0, 0, 1, 1, 0 },
-                        { 0, 0, 1, 0, 0 },
-                        { 0, 0, 1, 0, 0 }
-                }
-        );
+        int dfsResult2 = countIslands.countIslandsUsingDFS(matrix2);
 
         System.out.println(dfsResult + " " + dfsResult2);
     }
